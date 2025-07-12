@@ -1,0 +1,246 @@
+/* Google Fonts - Noto Sans KR, Roboto (선택 사항: 폰트 미리 로드) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif; /* 한국어 폰트 우선 적용 */
+    line-height: 1.7; /* 줄 간격 넓혀 가독성 향상 */
+    color: #343a40; /* 진한 회색 텍스트 */
+    margin: 0;
+    padding: 20px;
+    background-color: #e9ecef; /* 밝은 회색 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh; /* 최소 높이 설정 (세로 중앙 정렬) */
+    box-sizing: border-box; /* 패딩이 전체 너비에 포함되도록 */
+}
+
+.container {
+    max-width: 950px; /* 최대 너비 증가 */
+    width: 100%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 40px 50px; /* 패딩 증가 */
+    border-radius: 12px; /* 모서리 둥글게 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 더 깊은 그림자 효과 */
+    transition: all 0.3s ease-in-out; /* 모든 변화에 부드러운 전환 효과 */
+}
+
+.container:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* 호버 시 그림자 강조 */
+}
+
+h1 {
+    color: #0056b3; /* 파란색 계열 강조 */
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2.5em; /* 제목 크기 키움 */
+    font-weight: 700; /* 볼드체 */
+    border-bottom: 3px solid #ced4da; /* 옅은 회색 라인 */
+    padding-bottom: 20px;
+    letter-spacing: -0.5px; /* 자간 조절 */
+}
+
+h2 {
+    color: #212529; /* 거의 검은색 */
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+    position: relative; /* 가상 요소를 위한 위치 기준 */
+    padding-left: 15px;
+}
+
+h2::before { /* 제목 왼쪽에 장식 추가 */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 80%;
+    background-color: #007bff; /* 파란색 강조 */
+    border-radius: 3px;
+}
+
+
+h3 {
+    color: #007bff; /* 파란색 강조 */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; /* 클릭 영역 넓힘 */
+    background-color: #f8f9fa; /* 배경색 추가 */
+    border: 1px solid #dee2e6; /* 테두리 추가 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 옅은 그림자 */
+    transition: all 0.3s ease; /* 호버 및 활성 시 전환 효과 */
+}
+
+h3:hover {
+    background-color: #e2e6ea; /* 호버 시 배경색 변경 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 호버 시 그림자 강조 */
+}
+
+h3.active {
+    background-color: #e9f5ff; /* 활성 시 더 밝은 파란색 계열 */
+    border-color: #007bff; /* 활성 시 테두리 색상 변경 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 .toggle-icon {
+    margin-right: 15px;
+    font-size: 0.9em; /* 아이콘 크기 조절 */
+    transition: transform 0.3s ease;
+    color: #6c757d; /* 아이콘 색상 */
+}
+
+h3.active .toggle-icon {
+    transform: rotate(90deg);
+    color: #007bff; /* 활성 시 아이콘 색상 변경 */
+}
+
+h4 {
+    color: #495057; /* 중간 회색 */
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+    font-weight: 500;
+    border-left: 5px solid #6c757d; /* 강조 라인 색상 변경 */
+    padding-left: 12px;
+}
+
+ul {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* 체크박스 아이콘을 위한 공간 */
+    position: relative;
+}
+
+ul li::before { /* 커스텀 리스트 아이콘 (체크마크) */
+    content: '✔'; /* 유니코드 체크마크 */
+    color: #28a745; /* 녹색 */
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+    top: 3px;
+}
+
+ol {
+    margin-left: 0; /* 기본 마진 제거 */
+    padding-left: 25px; /* 들여쓰기 조절 */
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #212529; /* 강조 텍스트 색상 */
+    font-weight: 600;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0; /* 얇은 실선으로 변경 */
+    margin: 45px 0;
+}
+
+.lesson-content {
+    display: none; /* 기본적으로 숨김 */
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-top: none; /* 상단 테두리 제거 (h3와 연결) */
+    border-radius: 0 0 8px 8px; /* 하단만 둥글게 */
+    background-color: #fdfdfe; /* 내부 콘텐츠 배경색 */
+    margin-top: -15px; /* h3와 겹치게 하여 이음새를 자연스럽게 */
+    padding-top: 30px; /* 내부 콘텐츠 상단 패딩 */
+}
+
+.lesson-content p {
+    margin-bottom: 15px;
+}
+
+/* 파인만 기법 박스 스타일 */
+.lesson-content h4 + p { /* '파인만 기법 적용' 제목 바로 아래 문단 */
+    background-color: #fff3cd; /* 밝은 노란색 배경 */
+    border-left: 5px solid #ffc107; /* 노란색 강조 테두리 */
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-style: italic;
+    color: #856404;
+    line-height: 1.8;
+}
+
+/* 활동별 세부 목록 스타일 */
+.lesson-content ol li strong {
+    color: #007bff; /* 활동 제목 강조 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 30px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+    h3 {
+        font-size: 1.4em;
+        padding: 12px 15px;
+    }
+    h4 {
+        font-size: 1.1em;
+    }
+    .lesson-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px 20px;
+        margin: 10px auto;
+    }
+    h1 {
+        font-size: 1.8em;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 1.2em;
+        padding: 10px 10px;
+    }
+    h4 {
+        font-size: 1em;
+        padding-left: 8px;
+    }
+    ul li::before {
+        top: 2px;
+        font-size: 0.8em;
+    }
+    ul li, ol li {
+        margin-bottom: 8px;
+    }
+}
